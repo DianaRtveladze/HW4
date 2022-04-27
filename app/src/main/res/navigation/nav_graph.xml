@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_dashboard_Fragment"
+            app:destination="@id/dashboard_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard_Fragment"
+        android:name="com.example.myapplication.fragments.Dashboard_Fragment"
+        tools:layout="@layout/fragment_dashboard"
+        android:label="Dashboard_Fragment" >
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/notification_Fragment"
+        android:name="com.example.myapplication.fragments.Notification_Fragment"
+        tools:layout="@layout/fragment_notification"
+        android:label="Notification_Fragment" />
+
+    <fragment
+        android:id="@+id/myprofileFragment"
+        android:name="com.example.myapplication.fragments.Myprofile_Fragment"
+        tools:layout="@layout/fragment_myprofile"
+        android:label="Myprofile_Fragment" />
+</navigation>
